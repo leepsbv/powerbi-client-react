@@ -85,7 +85,6 @@ Redirect to http://localhost:8080/ to view in the browser.
 |Apply style class|Pass the name(s) of style classes to be added to the embed container div to the _cssClassName_ props.|
 |Set event handlers|Pass a map object of event name (string) and event handler (function) to the _eventHandlers_ prop. <br/>__Key__: Event name <br/>__Value__: Event handler method to be triggered<br/>Event handler method takes 2 optional params:<br/>First parameter: Event<br/>Second parameter: Reference to the embedded entity|
 |Reset event handlers|To reset event handler for an event, set the event handler's value as `null` in the _eventHandlers_ map of props.|
-|Set new accessToken|To set new accessToken in the same embedded powerbi artifact, pass the updated _accessToken_ in _embedConfig_ of props. <br/>Reload manually with report.reload() after providing new token if the current token in report has already expired<br/>Example scenario: _Current token has expired_.|
 |Update settings (Report type only)|To update the report settings, update the _embedConfig.settings_ property of props.<br/>Refer to the _embedConfig.settings_ prop in [Quick Start](#quick-start).<br/>__Note__: Update the settings only by updating embedConfig prop|
 |Bootstrap Power BI|To [bootstrap your powerbi entity](https://learn.microsoft.com/javascript/api/overview/powerbi/bootstrap-better-performance), pass the props to the component without _accessToken_ in _embedConfig_.<br/>__Note__: _embedConfig_ of props should at least contain __type__ of the powerbi entity being embedded. <br/>Available types: "report", "dashboard", "tile", "visual", "qna" and "paginated report".<br/>Refer to _How to bootstrap a report_ section in [Quick Start](#quick-start).|
 |Using with PowerBI Report Authoring|1. Install [powerbi-report-authoring](https://www.npmjs.com/package/powerbi-report-authoring) as npm dependency.<br>2. Use the report authoring APIs using the embedded report's instance|
@@ -188,19 +187,23 @@ async getReportPages(): Page[] {
 ```
 
 
-### Dependencies
+## Note
+
+The library supports React applications having version **>= 18**.
+
+## Dependencies
 
 [powerbi-client](https://www.npmjs.com/package/powerbi-client)
 
-### Peer dependencies
+## Peer dependencies
 
 [react](https://www.npmjs.com/package/react)
 
-### Trademarks
+## Trademarks
 
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft’s Trademark & Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general). Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party’s policies.
 
-### Contributing
+## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
@@ -212,12 +215,15 @@ provided by the bot. You will only need to do this once across all repos using o
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments
 
-### Data Collection.
+## Data Collection.
 
 The software may collect information about you and your use of the software and send it to Microsoft. Microsoft may use this information to provide services and improve our products and services. You may turn off the telemetry as described in the repository. There are also some features in the software that may enable you and Microsoft to collect data from users of your applications.
 
 If you use these features, you must comply with applicable law, including providing appropriate notices to users of your applications together with a copy of Microsoft’s privacy statement.
 Our privacy statement is located at [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement). You can learn more about data collection and use in the help documentation and our privacy statement. Your use of the software operates as your consent to these practices.
 
-### Support
-Our public support page is available at [Microsoft Support Statement](https://powerbi.microsoft.com/support/).
+## Support
+
+- **Feature Requests:** Submit your ideas and suggestions to the [Fabric Ideas Portal](https://ideas.fabric.microsoft.com/), where you can also vote on ideas from other developers.
+- **Bug Reports and Technical Assistance:** Visit the [Fabric Developer Community Forum](https://community.fabric.microsoft.com/t5/Developer/bd-p/Developer). Our team and community experts are ready to assist you.
+- **Additional Support:** Contact your account manager or reach out to the [Fabric Support Team](https://support.fabric.microsoft.com/en-us/support/).
